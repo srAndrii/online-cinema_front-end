@@ -10,6 +10,7 @@ const Menu: FC<{ menu: IMenu }> = ({menu:{items, title}}) => {
 			<div className={styles.heading}>
 				{title}
 			</div>
+
 			<ul className={styles.ul}>
 				{items.map(item =>(
 					<MenuItem item={item} key={item.link}/>

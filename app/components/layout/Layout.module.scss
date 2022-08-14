@@ -8,14 +8,18 @@ $bar-width:20%;
     max-width: 350px;
   }
 
-  >div:first-child::-webkit-scrollbar{
-    @apply left-0 border-r border-r-gray-800;
-    display: none
+  >div:first-child::-webkit-scrollbar, >div:last-child::-webkit-scrollbar{
+    display: none;
   }
 
-  >div:last-child::-webkit-scrollbar{
+  >div:first-child{
+    @apply left-0 border-r border-r-gray-800;
+
+  }
+
+  >div:last-child{
     @apply right-0 border-l border-l-gray-800;
-    display: none
+
   }
 
   .center{
