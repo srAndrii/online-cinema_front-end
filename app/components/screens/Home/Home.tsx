@@ -1,12 +1,19 @@
 import React, { FC } from 'react'
 import { IHome } from './home.interface'
-import Layout from '../../layout/Layout'
+import Meta from '../../../utils/meta/Meta'
+import Heading from '../../../ui/heading/Heading'
 
 const Home:FC<IHome> = () => {
 	return (
-		<Layout>
-			<h1>Home Page</h1>
-		</Layout>
+		<>
+			<Meta title='Watch movie online'
+				  description='Watch movies and TV shows online or stream right to your browser.'
+			>
+
+			</Meta>
+			<Heading title='Watch movies online' className='text-gray-500 mb-8 text-xl'/>
+		</>
+
 	)
 }
 

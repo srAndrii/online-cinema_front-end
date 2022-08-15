@@ -1,11 +1,12 @@
 import React, { FC } from 'react'
 import { QueryClient, QueryClientProvider } from 'react-query'
+import Layout from '../layout/Layout'
 
 interface Props {
-	children: React.ReactNode;
+	children?: React.ReactNode;
 }
 
-const quryClient = new QueryClient({
+const queryClient = new QueryClient({
 	defaultOptions:{
 		queries:{
 			refetchOnWindowFocus:false
@@ -16,8 +17,10 @@ const quryClient = new QueryClient({
 
 const MainProvider:FC<Props> = ({children}) => {
 	return (
-		<QueryClientProvider client={quryClient}>
-			{children}
+		<QueryClientProvider client={queryClient}>
+			<Layout>
+				{children}
+			</Layout>
 		</QueryClientProvider>
 	)
 }
