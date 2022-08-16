@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { FC, useState } from 'react'
 import { useAuthRedirect } from './useAuthRedirect'
 import { useAuth } from '../../../hooks/useAuth'
 import { SubmitHandler, useForm } from 'react-hook-form'
@@ -8,9 +8,10 @@ import Meta from '../../../utils/meta/Meta'
 import Heading from '../../../ui/heading/Heading'
 import Button from '../../../ui/form-elements/Button'
 import AuthFields from './AuthFields'
+import { useActions } from '../../../hooks/useActions'
 
-const Auth = () => {
-	useAuthRedirect()
+const Auth:FC = () => {
+	// useAuthRedirect()
 
 	const {isLoading} = useAuth()
 
@@ -20,12 +21,14 @@ const Auth = () => {
 		mode:'onChange'
 	})
 
-	const login = (data:any) =>{
-		console.table(`Login${data}`)
-	}
-	const register = (data:any) =>{
-		console.table(`Register${data}`)
-	}
+	const {login, register} = useActions()
+
+	// const login = (data:any) =>{
+	// 	console.table(`Login${data}`)
+	// }
+	// const register = (data:any) =>{
+	// 	console.table(`Register${data}`)
+	// }
 
 	const onSubmit:SubmitHandler<IAuthInput> = (data) => {
 		if(type === 'login') login(data)
@@ -35,9 +38,7 @@ const Auth = () => {
 
 	return (
 		<>
-			<Meta title='Auth'>
-
-			</Meta>
+			<Meta title='Auth'/>
 			<section className={styles.wrapper}>
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<Heading title='Auth' className='mb-6'/>
