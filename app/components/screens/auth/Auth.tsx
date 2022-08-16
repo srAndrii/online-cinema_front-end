@@ -11,7 +11,7 @@ import AuthFields from './AuthFields'
 import { useActions } from '../../../hooks/useActions'
 
 const Auth:FC = () => {
-	// useAuthRedirect()
+	useAuthRedirect()
 
 	const {isLoading} = useAuth()
 

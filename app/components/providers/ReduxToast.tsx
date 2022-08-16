@@ -12,6 +12,7 @@ const ReduxToast:FC = () => {
 			transitionIn='fadeIn'
 			transitionOut='fadeOut'
 
+
 		/>
 	)
 }
