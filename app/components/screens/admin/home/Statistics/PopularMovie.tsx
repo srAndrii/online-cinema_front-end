@@ -1,17 +1,17 @@
 import React, { FC } from 'react'
 
 import { useQuery } from 'react-query'
-import { AdminService } from '../../../../services/admin.service'
+import { AdminService } from '../../../../../services/admin.service'
 
 
 import styles from '../Admin.module.scss'
-import { MovieService } from '../../../../services/movie.service'
-import { IMovie } from '../../../../shared/types/movie.types'
+import { MovieService } from '../../../../../services/movie.service'
+import { IMovie } from '../../../../../shared/types/movie.types'
 import cn from 'classnames'
-import SkeletonLoader from '../../../../ui/SkeletonLoader'
-import SubHeading from '../../../../ui/heading/SubHeading'
+import SkeletonLoader from '../../../../../ui/SkeletonLoader'
+import SubHeading from '../../../../../ui/heading/SubHeading'
 import Link from 'next/link'
-import { getMovieUrl } from '../../../../config/url.config'
+import { getMovieUrl } from '../../../../../config/url.config'
 import Image from 'next/image'
 
 
