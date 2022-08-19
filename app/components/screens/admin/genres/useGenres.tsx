@@ -32,7 +32,7 @@ export const useGenres = () =>{
 		setSearchTerm(e.target.value)
 	}
 
-	const {mutateAsync:deleteAsync} = useMutation(['delete genre'], (genreId:string)=> GenreService.deleteGenre(genreId),
+	const {mutateAsync:deleteAsync} = useMutation(['delete genre'], (genreId:string)=> GenreService.delete(genreId),
 		{
 			onError:(error)=>{
 				toastError(error, 'Delete genre')
