@@ -13,6 +13,7 @@ import { useMovieEdit } from '../movie/useMovieEdit'
 import { IActorEditInput } from './actor-edit.interface'
 import { useActorEdit } from './useActorEdit'
 import AdminNavigation from '../../../../ui/admin-navigation/AdminNavigation'
+import UploadField from '../../../../ui/form-elements/UploadField/UploadField'
 
 const DynamicTextEditor = dynamic(
 	() => import('../../../../ui/form-elements/TextEditor'),
@@ -47,20 +48,20 @@ const ActorEdit:FC = () => {
 								}/>
 
 							</div>
-							{/*<Controller*/}
-							{/*	name="photo"*/}
-							{/*	control={control}*/}
-							{/*	defaultValue=""*/}
-							{/*	render={({*/}
-							{/*				 field: { value, onChange },*/}
-							{/*				 fieldState: { error },*/}
-							{/*			 }) => (*/}
-							{/*		<h1>photo upload</h1>*/}
-							{/*	)}*/}
-							{/*	rules={{*/}
-							{/*		required: 'Photo is required'*/}
-							{/*	}}*/}
-							{/*/>*/}
+							<Controller
+								name="photo"
+								control={control}
+								defaultValue=""
+								render={({
+											 field: { value, onChange },
+											 fieldState: { error },
+										 }) => (
+									<UploadField onChange={onChange} value={value} error={error} folder='actors' placeholder='photo'/>
+								)}
+								rules={{
+									required: 'Photo is required'
+								}}
+							/>
 						</div>
 						<Button>Update</Button>
 					</>
