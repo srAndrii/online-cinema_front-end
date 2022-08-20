@@ -7,6 +7,7 @@ import { convertMongoDate } from '../../../../utils/date/convertMongoDate'
 import { toastError } from '../../../../utils/toast-error'
 import { toastr } from 'react-redux-toastr'
 import { GenreService } from '../../../../services/genre.service'
+import { useRouter } from 'next/router'
 
 export const useGenres = () =>{
 	const [searchTerm, setSearchTerm] = useState('')
@@ -32,6 +33,19 @@ export const useGenres = () =>{
 		setSearchTerm(e.target.value)
 	}
 
+	const {push} = useRouter()
+
+	const {mutateAsync:createAsync} = useMutation(['create genre'], ()=> GenreService.create(),
+		{
+			onError:(error)=>{
+				toastError(error, 'Create genre')
+			},
+			onSuccess:({ data: _id })=>{
+				toastr.success('Create genre', 'Create was successful')
+				push(getAdminUrl(`genre/edit/${_id}`))
+			}
+		})
+
 	const {mutateAsync:deleteAsync} = useMutation(['delete genre'], (genreId:string)=> GenreService.delete(genreId),
 		{
 			onError:(error)=>{
@@ -44,6 +58,6 @@ export const useGenres = () =>{
 		})
 
 	return useMemo(() => ({
-		handleSearch, ...queryData, searchTerm, deleteAsync
-	}), [queryData, searchTerm, deleteAsync]);
+		handleSearch, ...queryData, searchTerm, deleteAsync, createAsync
+	}), [queryData, searchTerm, deleteAsync, createAsync]);
 }

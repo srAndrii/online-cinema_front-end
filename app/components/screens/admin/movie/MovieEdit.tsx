@@ -1,7 +1,5 @@
 import React, { FC } from 'react'
 import { useForm, Controller, SubmitHandler } from 'react-hook-form'
-import { IGenreEditInput } from './genre-edit.interface'
-import { useGenreEdit } from './useGenreEdit'
 import Meta from '../../../../utils/meta/Meta'
 import Heading from '../../../../ui/heading/Heading'
 import SkeletonLoader from '../../../../ui/SkeletonLoader'
@@ -10,9 +8,10 @@ import SlugField from '../../../../ui/form-elements/SlugField/SlugField'
 import generateSlug from '../../../../utils/sting/generateSlug'
 import Button from '../../../../ui/form-elements/Button'
 import formStyles from '../../../../ui/form-elements/admin-form.module.scss'
-import TextEditor from '../../../../ui/form-elements/TextEditor'
 import { stripHtml } from 'string-strip-html'
 import dynamic from 'next/dynamic'
+import { IMovieEditInput } from './movie-edit.interface'
+import { useMovieEdit } from './useMovieEdit'
 import AdminNavigation from '../../../../ui/admin-navigation/AdminNavigation'
 
 const DynamicTextEditor = dynamic(
@@ -23,16 +22,16 @@ const DynamicTextEditor = dynamic(
 )
 
 const GenreEdit:FC = () => {
-	const {handleSubmit, register, control, reset, formState:{errors}, setValue, getValues} = useForm<IGenreEditInput>({
+	const {handleSubmit, register, control, reset, formState:{errors}, setValue, getValues} = useForm<IMovieEditInput>({
 		mode:'onChange'
 	})
 
-	const {isLoading, onSubmit} = useGenreEdit(setValue)
+	const {isLoading, onSubmit} = useMovieEdit(setValue)
 	return (
 		<>
-			<Meta title='Edit genre'/>
+			<Meta title='Edit movie'/>
 			<AdminNavigation />
-			<Heading title='Edit genre'/>
+			<Heading title='Edit movie'/>
 			<form onSubmit={handleSubmit(onSubmit)} className={formStyles.form}>
 				{isLoading ? <SkeletonLoader count={3}/>
 					: <>

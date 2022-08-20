@@ -7,13 +7,13 @@ import { useMovies } from './useMovies'
 import AdminTable from '../../../../ui/admin-table/AdminTable/AdminTable'
 
 const MovieList:FC = () => {
-	const {handleSearch, isLoading, searchTerm, data, deleteAsync} = useMovies()
+	const {handleSearch, isLoading, searchTerm, data, deleteAsync, createAsync} = useMovies()
 	return (
 		<>
 			<Meta title={'Movies'}/>
 			<AdminNavigation/>
 			<Heading title={'Movies'}/>
-			<AdminHeader searchTerm={searchTerm} handleSearch={handleSearch}/>
+			<AdminHeader searchTerm={searchTerm} handleSearch={handleSearch} onClick={createAsync}/>
 			<AdminTable isLoading={isLoading} tableItems={data || []} removeHandler={deleteAsync} headerItems={['Title', 'Genres', 'Rating']} />
 		</>
 	)

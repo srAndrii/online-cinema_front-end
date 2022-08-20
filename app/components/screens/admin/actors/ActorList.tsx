@@ -7,13 +7,13 @@ import { useActor } from './useActor'
 import AdminTable from '../../../../ui/admin-table/AdminTable/AdminTable'
 
 const ActorList:FC = () => {
-	const {handleSearch, isLoading, searchTerm, data, deleteAsync} = useActor()
+	const {handleSearch, isLoading, searchTerm, data, deleteAsync, createAsync} = useActor()
 	return (
 		<>
 			<Meta title={'Actors'}/>
 			<AdminNavigation/>
 			<Heading title={'Actors'}/>
-			<AdminHeader searchTerm={searchTerm} handleSearch={handleSearch}/>
+			<AdminHeader searchTerm={searchTerm} handleSearch={handleSearch} onClick={createAsync}/>
 			<AdminTable isLoading={isLoading} tableItems={data || []} removeHandler={deleteAsync} headerItems={['Name', 'Count movies']} />
 		</>
 	)
