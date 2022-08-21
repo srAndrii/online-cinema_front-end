@@ -36,14 +36,14 @@ export const useMovies = () =>{
 
 	const {push} = useRouter()
 
-	const {mutateAsync:createAsync} = useMutation(['create movie'], ()=> GenreService.create(),
+	const {mutateAsync:createAsync} = useMutation(['create movie'], ()=> MovieService.create(),
 		{
 			onError:(error)=>{
 				toastError(error, 'Create movie')
 			},
 			onSuccess:({ data: _id })=>{
 				toastr.success('Create movie', 'Create was successful')
-				push(getAdminUrl(`genre/edit/${_id}`))
+				push(getAdminUrl(`movie/edit/${_id}`))
 			}
 		})
 

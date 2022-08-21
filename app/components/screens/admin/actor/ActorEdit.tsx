@@ -8,19 +8,11 @@ import SlugField from '../../../../ui/form-elements/SlugField/SlugField'
 import generateSlug from '../../../../utils/sting/generateSlug'
 import Button from '../../../../ui/form-elements/Button'
 import formStyles from '../../../../ui/form-elements/admin-form.module.scss'
-import dynamic from 'next/dynamic'
-import { useMovieEdit } from '../movie/useMovieEdit'
 import { IActorEditInput } from './actor-edit.interface'
 import { useActorEdit } from './useActorEdit'
 import AdminNavigation from '../../../../ui/admin-navigation/AdminNavigation'
 import UploadField from '../../../../ui/form-elements/UploadField/UploadField'
 
-const DynamicTextEditor = dynamic(
-	() => import('../../../../ui/form-elements/TextEditor'),
-	{
-		ssr: false,
-	}
-)
 
 const ActorEdit:FC = () => {
 	const {handleSubmit, register, control, reset, formState:{errors}, setValue, getValues} = useForm<IActorEditInput>({
