@@ -11,14 +11,14 @@ import { MovieService } from '../../../../services/movie.service'
 export const useMovieEdit = (setValue:UseFormSetValue<IMovieEditInput>)=>{
 	const {push, query} = useRouter()
 
-	const actorId = String(query.id)
+	const movieId = String(query.id)
 
-	const {isLoading} = useQuery(['movie', actorId], () => MovieService.getById(actorId), {
+	const {isLoading} = useQuery(['movie', movieId], () => MovieService.getById(movieId), {
 		onSuccess: ({data})=>{
 			getKeys(data).forEach(key => {
 				setValue(key, data[key])
 			})
-			setValue('name', data.name)
+
 		},
 		onError:(error) =>{
 			toastError(error, 'Get movie')
@@ -26,7 +26,7 @@ export const useMovieEdit = (setValue:UseFormSetValue<IMovieEditInput>)=>{
 		enabled: !!query.id,
 	})
 
-	const {mutateAsync} = useMutation('update movie', (data:IMovieEditInput)=> MovieService.update(actorId, data), {
+	const {mutateAsync} = useMutation('update movie', (data:IMovieEditInput)=> MovieService.update(movieId, data), {
 		onError:(error) =>{
 			toastError(error, 'Update movie')
 		},

@@ -1,4 +1,4 @@
-import { getGenresUrl, getUsersUrl } from '../config/api.config'
+import { getGenresUrl } from '../config/api.config'
 import { IGenre } from '../shared/types/movie.types'
 import axios, { axiosClassic } from '../api/interceptors'
 import { IGenreEditInput } from '../components/screens/admin/genre-editor/genre-edit.interface'

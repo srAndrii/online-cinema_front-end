@@ -7,7 +7,6 @@ import { getAdminUrl } from '../../../../config/url.config'
 import { toastError } from '../../../../utils/toast-error'
 import { toastr } from 'react-redux-toastr'
 import { getGenresList } from '../../../../utils/movie/getGenresListEach'
-import { GenreService } from '../../../../services/genre.service'
 import { useRouter } from 'next/router'
 
 export const useMovies = () =>{
