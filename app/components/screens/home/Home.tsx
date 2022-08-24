@@ -5,8 +5,11 @@ import { IHome } from './home.interface'
 import Meta from '../../../utils/meta/Meta'
 import Heading from '../../../ui/heading/Heading'
 import Slider from '../../../ui/slider/Slider'
+import SubHeading from '../../../ui/heading/SubHeading'
+import Gallery from '../../../ui/gallery/Gallery'
 
-const Home:FC<IHome> = ({slides}) => {
+const Home:FC<IHome> = ({slides, trendingMovies, actors}) => {
+
 	return (
 		<>
 			<Meta title='Watch movie online'
@@ -16,6 +19,14 @@ const Home:FC<IHome> = ({slides}) => {
 			</Meta>
 			<Heading title='Watch movies online' className='text-gray-500 mb-8 text-xl'/>
 			{slides.length && <Slider slides={slides}/>}
+			<div className='my-10'>
+				<SubHeading title='Trending Now'/>
+				{trendingMovies.length && <Gallery items={trendingMovies}/>}
+			</div>
+			<div>
+				<SubHeading title='Best Actors'/>
+				{actors.length && <Gallery items={actors}/>}
+			</div>
 		</>
 
 	)

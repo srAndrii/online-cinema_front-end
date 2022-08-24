@@ -14,6 +14,10 @@ body{
   margin: 0;
   font-family: 'Outfit', sans-serif;
   @apply bg-gray-900;
+
+  //&::-webkit-scrollbar {
+  //  display: none;
+  //}
 }
 
 a {
