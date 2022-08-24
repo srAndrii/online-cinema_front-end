@@ -89,7 +89,7 @@ const MovieEdit: FC = () => {
 							name='genres'
 							control={control}
 							rules={{
-								required: 'Please select at least one genre!',
+								required: 'Please select at least one genres!',
 							}}
 							render={({ field, fieldState: { error } }) => (
 								<DynamicSelect

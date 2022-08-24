@@ -4,7 +4,7 @@ import { toastError } from '../../../../utils/toast-error'
 import { IOption } from '../../../../ui/select/select.interface'
 
 export const useAdminGenre = () => {
-	const queryData = useQuery('List of genre', () => GenreService.getAll(), {
+	const queryData = useQuery('List of genres', () => GenreService.getAll(), {
 		select: ({ data }) =>
 			data.map(
 				(genre): IOption => ({

@@ -21,17 +21,17 @@ export const useGenreEdit = (setValue:UseFormSetValue<IGenreEditInput>)=>{
 			setValue('name', data.name)
 		},
 		onError:(error) =>{
-			toastError(error, 'Get genre')
+			toastError(error, 'Get genres')
 		},
 		enabled: !!query.id,
 	})
 
-	const {mutateAsync} = useMutation('update genre', (data:IGenreEditInput)=> GenreService.update(genreId, data), {
+	const {mutateAsync} = useMutation('update genres', (data:IGenreEditInput)=> GenreService.update(genreId, data), {
 		onError:(error) =>{
-			toastError(error, 'Update genre')
+			toastError(error, 'Update genres')
 		},
 		onSuccess() {
-			toastr.success('Update genre', 'update was successful')
+			toastr.success('Update genres', 'update was successful')
 			push(getAdminUrl('genres'))
 		},
 	})
