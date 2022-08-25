@@ -4,7 +4,6 @@ import Catalog from '../../app/ui/catalog-movie/Catalog'
 import { GenreService } from '../../app/services/genre.service'
 import { MovieService } from '../../app/services/movie.service'
 import Error404 from '../404'
-import { errorCatch } from '../../app/api/api.helpers'
 
 interface IGenrePage {
 	movies: IMovie[]
