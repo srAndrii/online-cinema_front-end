@@ -5,6 +5,12 @@ import Banner from '../../../ui/banner/Banner'
 import SubHeading from '../../../ui/heading/SubHeading'
 import Gallery from '../../../ui/gallery/Gallery'
 import Content from './Content/Content'
+import VideoPlayer from '../../../ui/video-player/VideoPlayer'
+import dynamic from 'next/dynamic'
+
+const DynamicPlayer = dynamic(() => import('../../../ui/video-player/VideoPlayer'), {
+	ssr: false,
+})
 
 const SingleMovie:FC<IMoviePage>= ({movie, similarMovies}) => {
 	return (
@@ -13,7 +19,8 @@ const SingleMovie:FC<IMoviePage>= ({movie, similarMovies}) => {
 			<Banner image={movie.bigPoster}
 					Detail={()=> <Content movie={movie}/>}
 			/>
-
+			
+			<DynamicPlayer videoSource={movie.videoUrl} slug={movie.slug}/>
 
 			<div className='mt-12'>
 				<SubHeading title="Similar"/>
