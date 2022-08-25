@@ -18,6 +18,12 @@ export const MovieService = {
 		return axiosClassic.get<IMovie[]>(getMoviesUrl(`/by-actor/${actorId}`))
 	},
 
+	async updateCountOpened(slug: string) {
+		return axiosClassic.put(getMoviesUrl('/update-count-opened'), {
+			slug,
+		})
+	},
+
 	async getByGenres(genreIds:string[]){
 		return axiosClassic.post<IMovie[]>(getMoviesUrl(`/by-genres`), {genreIds})
 	},
