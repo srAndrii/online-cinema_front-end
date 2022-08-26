@@ -3,6 +3,7 @@ import { getGenresUrl, getUsersUrl } from '../config/api.config'
 import { IUser } from '../shared/types/user.types'
 import { IProfileInput } from '../components/screens/profile/profile.interface'
 import { IGenreEditInput } from '../components/screens/admin/genre-editor/genre-edit.interface'
+import { IMovie } from '../shared/types/movie.types'
 
 export const UserService = {
 	async getAll(searchTerm?: string ){
@@ -13,6 +14,19 @@ export const UserService = {
 
 	async getProfile(){
 		return axios.get<IUser>(getUsersUrl('/profile'))
+	},
+
+	async getFavorites(){
+		return axios.get<IMovie[]>(getUsersUrl('/profile/favorites'))
+	},
+
+	// async toggleFavorite(movieId:string){
+	// 	return axios.put<string>(getUsersUrl('/profile/favorites'), movieId)
+	// },
+	async toggleFavorite(movieId: string) {
+		return axios.put(getUsersUrl('/profile/favorites'), {
+			movieId,
+		})
 	},
 
 	async updateProfile(data:IProfileInput){
