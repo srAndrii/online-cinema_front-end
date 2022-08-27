@@ -3,10 +3,12 @@ import { useMutation, useQuery } from 'react-query'
 import { useState } from 'react'
 import { toastError } from '../../../../utils/toast-error'
 import { toastr } from 'react-redux-toastr'
+import { useAuth } from '../../../../hooks/useAuth'
 
 export const useRateMovie = (movieId: string) => {
 	const [rating, setRating] = useState(0)
 	const [isSended, setIsSended] = useState(false)
+	const {user} = useAuth()
 
 	const { refetch } = useQuery(
 		['your movie rating', movieId],
@@ -15,7 +17,7 @@ export const useRateMovie = (movieId: string) => {
 			onSuccess({ data }) {
 				setRating(data)
 			},
-			enabled: !!movieId,
+			enabled: !!movieId && !!user
 		}
 	)
 

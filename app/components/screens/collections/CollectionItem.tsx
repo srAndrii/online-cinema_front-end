@@ -21,7 +21,7 @@ const CollectionItem: FC<{ collection: ICollection }> = ({ collection }) => {
 					<CollectionImage collection={collection} />
 				</div>
 
-				<div className={cn(styles.behind, styles.second)}>
+				<div className={cn(styles.behind, styles.third)}>
 					<CollectionImage collection={collection} />
 				</div>
 			</a>

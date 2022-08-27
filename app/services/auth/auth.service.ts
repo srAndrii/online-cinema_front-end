@@ -8,7 +8,7 @@ import { getContentType } from '../../api/api.helpers'
 
 export const AuthService = {
 	async register(email:string, password:string){
-		const response = await axiosClassic.post<IAuthResponse>(getAuthUrl('register'), {email, password})
+		const response = await axiosClassic.post<IAuthResponse>(getAuthUrl('/register'), {email, password})
 
 		if (response.data.accessToken){
 			saveToStorage(response.data)
@@ -17,7 +17,7 @@ export const AuthService = {
 	},
 
 	async login(email:string, password:string){
-		const response = await axiosClassic.post<IAuthResponse>(getAuthUrl('login'), {email, password})
+		const response = await axiosClassic.post<IAuthResponse>(getAuthUrl('/login'), {email, password})
 
 		if (response.data.accessToken){
 			saveToStorage(response.data)

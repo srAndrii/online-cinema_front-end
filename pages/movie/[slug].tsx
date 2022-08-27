@@ -52,6 +52,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 		return {
 			props: { similarMovies, movie },
+			revalidate: 60,
 		}
 	} catch (e) {
 		// console.log(errorCatch(e))

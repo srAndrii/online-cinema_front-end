@@ -14,12 +14,13 @@ export const getStaticProps: GetStaticProps = async () => {
 
 		return {
 			props: { collections },
+			revalidate: 60,
 		}
 	} catch (e) {
 
 		return {
 			props: {},
-			notFound: true,
+			// notFound: true,
 		}
 	}
 }

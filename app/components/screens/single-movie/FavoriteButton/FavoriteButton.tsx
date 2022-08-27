@@ -4,10 +4,10 @@ import { useMutation } from 'react-query'
 import { useFavorites } from '../../favorites/useFavorites'
 import { toastError } from '../../../../utils/toast-error'
 import cn from 'classnames'
-import HeartImage from './heart-animation.png'
 import styles from './FavoriteButton.module.scss'
 
 const FavoriteButton: FC<{ movieId: string }> = ({ movieId }) => {
+
 	const [isSmashed, setIsSmashed] = useState(false)
 
 	const { favoritesMovies, refetch } = useFavorites()
@@ -41,7 +41,7 @@ const FavoriteButton: FC<{ movieId: string }> = ({ movieId }) => {
 			className={cn(styles.button, {
 				[styles.animate]: isSmashed,
 			})}
-			style={{ backgroundImage: `url(${HeartImage.src})` }}
+			style={{ backgroundImage: `url('/heart-animation.png')` }}
 		/>
 	)
 }

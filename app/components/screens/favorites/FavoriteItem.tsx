@@ -5,11 +5,14 @@ import FavoriteButton from '../single-movie/FavoriteButton/FavoriteButton'
 import Link from 'next/link'
 import { getMovieUrl } from '../../../config/url.config'
 import styles from './Favorite.module.scss'
+import { useAuth } from '../../../hooks/useAuth'
 
 const FavoriteItem: FC<{ movie: IMovie }> = ({ movie }) => {
+	const {user} = useAuth()
+
 	return (
 		<div className={styles.itemWrapper}>
-			<FavoriteButton movieId={movie._id} />
+			{user && <FavoriteButton movieId={movie._id} />}
 			<Link href={getMovieUrl(movie.slug)}>
 				<a className={styles.item}>
 					<Image
