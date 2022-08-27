@@ -12,11 +12,11 @@ const nextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: `http://localhost:4200/api/:path*`,
+        destination: `https://movie--night.herokuapp.com/api/:path*`,
       },
       {
         source: '/uploads/:path*',
-        destination: `http://localhost:4200/uploads/:path*`,
+        destination: `https://movie--night.herokuapp.com/uploads/:path*`,
       },
     ]
   },
