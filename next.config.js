@@ -10,14 +10,14 @@ const nextConfig = {
   },
   async rewrites() {
     return [
-      {
-        source: '/api/:path*',
-        destination: `https://movie--night.herokuapp.com/api/:path*`,
-      },
-      {
-        source: '/uploads/:path*',
-        destination: `https://movie--night.herokuapp.com/uploads/:path*`,
-      },
+		{
+			source: '/api/:path*',
+			destination: `https://movie--night.herokuapp.com/api/:path*`,
+		},
+		{
+			source: '/uploads/:path*',
+			destination: `https://movie--night.herokuapp.com/uploads/:path*`,
+		},
     ]
   },
 

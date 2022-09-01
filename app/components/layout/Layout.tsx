@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from 'react'
 import styles from './Layout.module.scss'
 import Navigation from './Navigation/Navigation'
 import Sidebar from './Sidebar/Sidebar'
-import Header from './Navigation/Header/Header'
+import Header from './Navigation/MobileNavbar/MobileNavbar'
 
 interface LayoutProps {
 	children?: ReactNode;
