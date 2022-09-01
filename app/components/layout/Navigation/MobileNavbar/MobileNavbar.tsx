@@ -10,7 +10,7 @@ import { HiMenuAlt4, HiX } from 'react-icons/hi'
 
 import { motion } from 'framer-motion'
 
-import styles from './MobileNavbar.scss'
+import styles from './MobileNavbar.module.scss'
 
 const DynamicFavoriteMovies = dynamic(
 	() => import('../../Sidebar/MoviesContainer/FavoriteMovies/FavoriteMovies'),
