@@ -6,6 +6,12 @@
 
   .slide {
     @apply relative h-80 rounded-3xl overflow-hidden shadow-xl flex items-end;
+    @media (min-width: 450px) and (max-width: 700px){
+      height: 13rem;
+    }
+    @media (min-width: 280px) and (max-width: 450px){
+      height: 9rem;
+    }
 
     @include fade-bg-gradient();
 
@@ -15,17 +21,33 @@
 
     .content {
       @apply relative z-2 p-8;
+      @media (min-width: 280px) and (max-width: 450px){
+        padding: 0.8rem 1rem;
+      }
 
       .heading {
         @apply text-white uppercase text-5xl font-semibold mb-1 text-shadow;
+        @media (min-width: 280px) and (max-width: 700px){
+          font-size: 1.5rem;
+        }
+        @media (min-width: 280px) and (max-width: 450px){
+           font-size: 1rem;
+        }
       }
 
       .subHeading {
         @apply text-gray-300 font-medium uppercase mb-4 text-shadow;
+        @media (min-width: 280px) and (max-width: 700px){
+          font-size: 0.75rem;
+          margin-bottom: 3rem;
+        }
       }
 
       .button {
         @apply btn-primary p-2 px-10;
+        @media (min-width: 280px) and (max-width: 700px){
+          padding: 0.2rem 1rem;
+        }
       }
     }
   }

@@ -7,6 +7,11 @@ $bar-width:19%;
     @apply fixed top-0 bottom-0 overflow-y-scroll;
     width: $bar-width;
     max-width: 350px;
+    @media (max-width: 1200px){
+      display: none;
+    }
+
+
   }
 
   >div:first-child::-webkit-scrollbar, >div:last-child::-webkit-scrollbar{
@@ -21,6 +26,14 @@ $bar-width:19%;
   .center{
     @apply min-h-screen p-layout;
     margin: 0 $bar-width;
+    @media(min-width: 700px) and (max-width: 1200px){
+      margin: 0 30px;
+      padding: 110px 0;
+    }
+    @media (min-width: 280px) and (max-width: 700px){
+      margin: 0 20px;
+      padding: 100px 0;
+    }
   }
 
   >div:last-child{

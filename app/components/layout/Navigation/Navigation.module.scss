@@ -1,3 +1,10 @@
 .navigation{
   @apply py-layout;
 }
+.logo{
+  @apply px-layout mb-10 block;
+  @media (max-width: 1200px){
+    margin-bottom: 0;
+    padding: 10px 0 0 0;
+  }
+}

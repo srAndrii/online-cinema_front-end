@@ -2,6 +2,10 @@
 
 .favorites {
   @apply flex flex-wrap mt-12;
+  @media (min-width: 280px) and (max-width: 700px){
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .containerLoader {
@@ -21,6 +25,12 @@
 .itemWrapper {
   @apply relative mb-8 h-44 mr-8 animate-fade transition-transform hover:-translate-y-3;
   width: 31%;
+  @media (min-width: 280px) and (max-width: 700px){
+    margin-right: 0;
+  }
+  @media (min-width: 280px) and (max-width: 700px){
+    width: 80%;
+  }
 
   &:nth-child(3n) {
     @apply mr-0;

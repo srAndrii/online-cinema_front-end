@@ -31,6 +31,11 @@
 
       .title {
         @apply text-white text-lg font-medium truncate;
+        @media (min-width: 280px) and (max-width: 700px){
+          font-size: 1rem;
+          line-height: 1.125rem;
+          white-space: normal;
+        }
       }
 
       .genres {
@@ -42,6 +47,10 @@
 
         > svg {
           @apply fill-yellow-700 mr-2 text-lg;
+          @media (min-width: 280px) and (max-width: 700px){
+            width: 25px;
+            height: 25px;
+          }
         }
 
         > span {

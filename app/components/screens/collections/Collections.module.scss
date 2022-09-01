@@ -2,22 +2,44 @@
 
 $shadow: 0 10px 10px 0 rgb(0 0 0 / 15%), 0 6px 6px 0 rgb(0 0 0 / 15%),
 0 3px 3px 0 rgb(0 0 0 / 15%);
-
+.heading{
+  font-size: 1.875rem;
+  @media (min-width: 280px) and (max-width: 450px){
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
 .collections {
-  @apply flex flex-wrap items-center mt-10;
+  @apply flex flex-wrap items-center mt-10 ;
+  @media (max-width: 1200px){
+    justify-content: space-around;
+  }
 
   > a {
     @apply mr-8 animate-fade;
+    @media (max-width: 1200px){
+      margin-right: 0rem;
+    }
+
   }
 
   > a:nth-child(3n) {
     @apply mr-0;
+    @media (max-width: 1200px){
+      margin-right: 0rem;
+    }
   }
 }
 
 .collection {
   @apply relative flex items-end mb-10 h-44 transition-transform;
   width: 30%;
+  @media (min-width: 280px) and (max-width: 700px){
+    width: 75%;
+  }
+  //@media (min-width: 300px) and (max-width: 390px){
+  //  width: 75%;
+  //}
 
   @include fade-bg-gradient(0deg);
   &::before {

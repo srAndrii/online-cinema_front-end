@@ -4,4 +4,10 @@
   @apply relative overflow-hidden w-full h-[17rem] rounded-layout shadow-lg flex flex-col justify-end;
 
   @include fade-bg-gradient();
+  .img{
+    @apply image-like-bg object-top;
+    @media (min-width: 700px) and (max-width: 960px){
+      height: auto;
+    }
+  }
 }

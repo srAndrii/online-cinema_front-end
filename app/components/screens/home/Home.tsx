@@ -17,7 +17,7 @@ const Home:FC<IHome> = ({slides, trendingMovies, actors}) => {
 			>
 
 			</Meta>
-			<Heading title='Watch movies online' className='text-gray-500 mb-8 text-xl'/>
+			<Heading title='Watch movies online' className='text-gray-500 mb-8 text-xl sm:text-3xl'/>
 			{slides.length && <Slider slides={slides}/>}
 			<div className='my-10'>
 				<SubHeading title='Trending Now'/>
