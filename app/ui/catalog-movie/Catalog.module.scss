@@ -1,5 +1,8 @@
 .heading {
-  @apply mb-3;
+  @apply mb-3 text-3xl;
+  h1{
+    font-size: 2rem;
+  }
 }
 
 .movies {
@@ -15,6 +18,7 @@
       margin-right: 15px;
     }
     @media (min-width: 280px) and (max-width: 700px){
+      font-size: 1rem;
       margin-right: 0;
     }
   }

@@ -1,8 +1,15 @@
 .content {
   @apply relative z-2 p-8;
+  @media (min-width: 280px) and (max-width: 700px){
+    padding: 1rem;
+  }
 
   > h1 {
     @apply text-white uppercase text-5xl font-semibold mb-1 text-shadow;
+    @media (min-width: 280px) and (max-width: 700px){
+      font-size: 1.25rem;
+      margin-bottom: 0;
+    }
   }
 
   .rating {
@@ -19,5 +26,9 @@
 
   .details {
     @apply text-white text-opacity-80 my-3;
+    @media (min-width: 280px) and (max-width: 700px){
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
   }
 }
