@@ -10,37 +10,42 @@ Tech stack:\
 -NestJS as back-end framework([link](https://github.com/srAndrii/online-cinema_back-end) to back-end repository)
 
 ## [Movie Night](https://movie--night.vercel.app/) includes:
-### Home Page
-![](../../../../Users/Andrii/Desktop/homaPage.gif)
+### Home Page![homaPage](https://user-images.githubusercontent.com/90868495/188932852-0944881c-07f9-4479-9b33-18e039e3f794.gif)
+
+
 
 ### Discovery - page with different genres
-![](../../../../Users/Andrii/Desktop/discovery.gif)
+![discovery](https://user-images.githubusercontent.com/90868495/188932907-7b546e06-56cc-4efb-a85d-1db2cc6acd18.gif)
+
 
 ### Fresh movies
-![](../../../../Users/Andrii/Desktop/freshMovies.gif)
+![freshMovies](https://user-images.githubusercontent.com/90868495/188932925-57b5ec77-5939-4d07-afae-db46db4eb82f.gif)
 
 ###  Trending now - movies sorted by views
-![](../../../../Users/Andrii/Desktop/trending.gif)
+![trending](https://user-images.githubusercontent.com/90868495/188932935-30caf398-528e-4b3a-9f2f-4e89f848eda3.gif)
 
 ### Genre page
 ![](../../../../Users/Andrii/Desktop/genrePage.gif)
+![genrePage](https://user-images.githubusercontent.com/90868495/188932995-638c68eb-4f3f-4ee5-a80d-12600267a4f8.gif)
 
 ### Auth page. If you want to watch movie you need to log in or register
-![](../../../../Users/Andrii/Desktop/auth.gif)
+![auth](https://user-images.githubusercontent.com/90868495/188933012-059f580c-c45f-4052-80d1-ee7f0beb85a8.gif)
 
 ### Movie page 
-![](../../../../Users/Andrii/Desktop/moviePage.gif)
+![moviePage](https://user-images.githubusercontent.com/90868495/188933785-ec940369-399c-4d1e-956f-4898feb1d0c9.gif)
 
 ### Favorites movies. You can save your favorite movies
-![](../../../../Users/Andrii/Desktop/favorites.gif)
+![favorites](https://user-images.githubusercontent.com/90868495/188933798-c2a395fe-7e73-44b0-8fd9-6c4f814e7644.gif)
 
 ### Admin panel. Statistics, Users, Actors - adding new actor
-![](../../../../Users/Andrii/Desktop/adminStatUserActor.gif)
+![adminStatUserActor](https://user-images.githubusercontent.com/90868495/188933829-a59cb862-510d-4375-baee-1f570f75b91f.gif)
 
 ### Admin panel. Creating new genre
-![](../../../../Users/Andrii/Desktop/adminGenre.gif)
+![adminGenre](https://user-images.githubusercontent.com/90868495/188933870-2d9afd7e-301b-4d28-8b8a-c4a21f95bbac.gif)
+
 ### Admin panel. Adding new movie
-![](../../../../Users/Andrii/Desktop/adminCreateMovie.gif)
+![adminCreateMovie](https://user-images.githubusercontent.com/90868495/188933921-59c882b2-d569-4068-b037-f7269ec24236.gif)
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
