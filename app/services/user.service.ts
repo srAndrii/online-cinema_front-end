@@ -1,8 +1,7 @@
 import axios from '../api/interceptors'
-import { getGenresUrl, getUsersUrl } from '../config/api.config'
+import {  getUsersUrl } from '../config/api.config'
 import { IUser } from '../shared/types/user.types'
 import { IProfileInput } from '../components/screens/profile/profile.interface'
-import { IGenreEditInput } from '../components/screens/admin/genre-editor/genre-edit.interface'
 import { IMovie } from '../shared/types/movie.types'
 
 export const UserService = {

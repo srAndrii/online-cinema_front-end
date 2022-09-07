@@ -40,6 +40,7 @@ const MobileNavbar:FC = () => {
 			</div>
 			<motion.nav animate={show ? 'open' : 'closed'}
 						variants={variants}
+						initial='closed'
 						transition={{ duration: 0.5 }}
 						className={styles.mobile_navbar}
 			>

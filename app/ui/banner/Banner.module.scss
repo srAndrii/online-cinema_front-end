@@ -1,7 +1,7 @@
 @import '../../assets/styles/_variables.scss';
 
 .banner {
-  @apply relative overflow-hidden w-full h-[17rem] rounded-layout shadow-lg flex flex-col justify-end;
+  @apply relative overflow-hidden w-full h-[20rem]rounded-layout shadow-lg flex flex-col justify-end;
   @media (min-width: 280px) and (max-width: 450px){
     height: 12rem;
   }

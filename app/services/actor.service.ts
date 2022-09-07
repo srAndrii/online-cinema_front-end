@@ -1,7 +1,7 @@
 import axios, { axiosClassic } from '../api/interceptors'
 import { IActor } from '../shared/types/movie.types'
-import { getActorsUrl, getGenresUrl, getMoviesUrl, getUsersUrl } from '../config/api.config'
-import { IMovieEditInput } from '../components/screens/admin/movie/movie-edit.interface'
+import { getActorsUrl } from '../config/api.config'
+
 import { IActorEditInput } from '../components/screens/admin/actor/actor-edit.interface'
 
 export const ActorsService = {
