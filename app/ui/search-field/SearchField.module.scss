@@ -1,5 +1,9 @@
 .search {
   @apply rounded-3xl border border-gray-700 px-3 py-2 flex items-center transition-colors;
+  @media (min-width: 280px) and (max-width: 700px){
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+  }
 
   > svg {
     @apply fill-gray-600 mr-2 text-3xl transition-colors;

@@ -1,12 +1,15 @@
 import React, { FC } from 'react'
-
+import Link from 'next/link'
 
 import { IMovie } from '../../../../../shared/types/movie.types'
 
-import styles from './SearchList.module.scss'
-import Link from 'next/link'
+
 import { getMovieUrl } from '../../../../../config/url.config'
+
 import Image from 'next/image'
+
+import styles from './SearchList.module.scss'
+
 const SearchList:FC<{movies:IMovie[]}> = ({movies}) => {
 	return (
 		<div className={styles.list}>

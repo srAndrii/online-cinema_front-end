@@ -1,3 +1,9 @@
 .wrapper {
   @apply relative;
+  @media (min-width: 700px) and (max-width: 1200px){
+    margin-bottom: 15px;
+  }
+  @media (min-width: 280px) and (max-width: 700px){
+    margin-bottom: 10px;
+  }
 }
